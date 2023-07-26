@@ -12,7 +12,7 @@ public interface JpaConst {
     //データ取得件数の最大値
     int ROW_PER_PAGE = 15; //1ページに表示するレコードの数
 
-    //従業員テーブル
+  //従業員テーブル
     String TABLE_EMP = "employees"; //テーブル名
     //従業員テーブルカラム
     String EMP_COL_ID = "id"; //id
@@ -50,7 +50,7 @@ public interface JpaConst {
     String JPQL_PARM_EMPLOYEE = "employee"; //従業員
 
     //NamedQueryの nameとquery
-    //全ての従業員をidの降順に取得する
+  //全ての従業員をidの降順に取得する
     String Q_EMP_GET_ALL = ENTITY_EMP + ".getAll"; //name
     String Q_EMP_GET_ALL_DEF = "SELECT e FROM Employee AS e ORDER BY e.id DESC"; //query
     //全ての従業員の件数を取得する
@@ -62,6 +62,7 @@ public interface JpaConst {
     //指定した社員番号を保持する従業員の件数を取得する
     String Q_EMP_COUNT_REGISTERED_BY_CODE = ENTITY_EMP + ".countRegisteredByCode";
     String Q_EMP_COUNT_REGISTERED_BY_CODE_DEF = "SELECT COUNT(e) FROM Employee AS e WHERE e.code = :" + JPQL_PARM_CODE;
+
     //全ての日報をidの降順に取得する
     String Q_REP_GET_ALL = ENTITY_REP + ".getAll";
     String Q_REP_GET_ALL_DEF = "SELECT r FROM Report AS r ORDER BY r.id DESC";
